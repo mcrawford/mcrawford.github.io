@@ -48,7 +48,7 @@ System.register(['angular2/core', './puzzle'], function(exports_1, context_1) {
                         }
                         n++;
                         loopEnd = new Date().getTime();
-                    } while (puzzle != null && puzzle.skippedWords.length > 0 && loopEnd - start < 100);
+                    } while (puzzle != null && puzzle.skippedWords.length > 0 && loopEnd - start < 500);
                     console.log("Tried " + n + " puzzles.");
                     return puzzle;
                 };

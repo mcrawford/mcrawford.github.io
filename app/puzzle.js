@@ -24,6 +24,7 @@ System.register(['./grid'], function(exports_1, context_1) {
                     _super.call(this, rows, columns);
                     this.words = [];
                     this.usedWords = [];
+                    this.usedIndices = [];
                     this.skippedWords = [];
                     this.rows = 15;
                     this.columns = 15;
@@ -65,8 +66,7 @@ System.register(['./grid'], function(exports_1, context_1) {
                             this.directionPositions.push({
                                 direction: directions[j],
                                 directionIdx: j,
-                                position: i,
-                                used: false
+                                position: i
                             });
                         }
                     }
@@ -85,11 +85,11 @@ System.register(['./grid'], function(exports_1, context_1) {
                         var addedWord = false;
                         for (var i = 0; i < numDirectionPositions; i++) {
                             var dirPos = this.directionPositions[i];
-                            if (!dirPos.used && this.willFit(letters, dirPos.position, dirPos.direction)) {
+                            if (this.willFit(letters, dirPos.position, dirPos.direction) && !this.overlapsExistingWord(letters, dirPos.position, dirPos.direction)) {
                                 this.putWord(letters, dirPos.position, dirPos.direction);
                                 this.usedWords.push(word);
+                                this.usedIndices.push(this.getIndices(word.length, dirPos.position, dirPos.direction));
                                 this.numWordsByDirection[dirPos.directionIdx]++;
-                                dirPos.used = true;
                                 addedWord = true;
                                 break;
                             }
@@ -107,26 +107,49 @@ System.register(['./grid'], function(exports_1, context_1) {
                     }
                 };
                 Puzzle.prototype.willFit = function (letters, pos, dir) {
+                    var len = letters.length;
                     var point = this.at(pos);
-                    var endRow = letters.length * dir[0] + point.row;
+                    var endRow = len * dir[0] + point.row;
                     if (endRow < 0 || endRow > this.rows) {
                         return false;
                     }
-                    var endCol = letters.length * dir[1] + point.col;
+                    var endCol = len * dir[1] + point.col;
                     if (endCol < 0 || endCol > this.columns) {
                         return false;
                     }
-                    for (var i = 0; i < letters.length; i++) {
+                    for (var i = 0; i < len; i++) {
                         var letter = letters[i];
                         var curRow = point.row + i * dir[0];
                         var curCol = point.col + i * dir[1];
-                        if (this.get(curRow, curCol) != '-' && this.get(curRow, curCol) != letter) {
+                        var curLetter = this.get(curRow, curCol);
+                        if (curLetter != '-' && curLetter != letter) {
                             return false;
                         }
                     }
                     return true;
                 };
+                Puzzle.prototype.overlapsExistingWord = function (letters, pos, dir) {
+                    var indices = this.getIndices(letters.length, pos, dir);
+                    var len = indices.length;
+                    var usedIndicesLen = this.usedIndices.length;
+                    for (var i = 0; i < usedIndicesLen; i++) {
+                        var usedIndices = this.usedIndices[i];
+                        var usedLen = usedIndices.length;
+                        var numDupes = 0;
+                        for (var j = 0; j < len; j++) {
+                            for (var k = 0; k < usedLen; k++) {
+                                if (indices[j] == usedIndices[k]) {
+                                    if (++numDupes > 1) {
+                                        return true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    return false;
+                };
                 Puzzle.prototype.contains = function (word) {
+                    // TODO: I'm not sure this works at all...
                     var len = word.length;
                     var numPositions = this.positions.length;
                     var numDirections = this.DIRS.length;
@@ -152,13 +175,22 @@ System.register(['./grid'], function(exports_1, context_1) {
                     return word;
                 };
                 Puzzle.prototype.putWord = function (letters, pos, dir) {
+                    var len = letters.length;
                     var point = this.at(pos);
-                    for (var i = 0; i < letters.length; i++) {
+                    for (var i = 0; i < len; i++) {
                         var letter = letters[i];
                         var curRow = point.row + i * dir[0];
                         var curCol = point.col + i * dir[1];
                         this.put(letter, curRow, curCol);
                     }
+                };
+                Puzzle.prototype.getIndices = function (len, pos, dir) {
+                    var indices = [];
+                    var point = this.at(pos);
+                    for (var i = 0; i < len; i++) {
+                        indices.push(this.index(point.row + i * dir[0], point.col + i * dir[1]));
+                    }
+                    return indices;
                 };
                 Puzzle.prototype.getRows = function () {
                     var rows = [];
@@ -170,15 +202,6 @@ System.register(['./grid'], function(exports_1, context_1) {
                         rows.push(row);
                     }
                     return rows;
-                };
-                Puzzle.prototype.getNumberOfBlanks = function () {
-                    var blanks = 0;
-                    for (var i = 0; i < this.size; i++) {
-                        if (this.get(i) == '-') {
-                            blanks++;
-                        }
-                    }
-                    return blanks;
                 };
                 Puzzle.prototype.getNumberOfLettersInUsedWords = function () {
                     var n = 0;
