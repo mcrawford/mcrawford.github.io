@@ -25,7 +25,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                     core_1.Component({
                         selector: 'word-list',
                         inputs: ['words', 'title'],
-                        template: "\n        <h3 *ngIf=\"title\">{{ title }}</h3>\n        <div class=\"container\">\n            <ul class=\"list-unstyled row\">\n                <li *ngFor=\"#word of words.sort()\" class=\"col-sm-4\">{{ word }}</li>\n            </ul>\n        </div>\n    "
+                        template: "\n        <h3 *ngIf=\"title\">{{ title }}</h3>\n        <div class=\"container\">\n            <ul class=\"list-unstyled list-inline row\">\n                <li *ngFor=\"#word of words.sort()\" class=\"col-xs-4\">{{ word }}</li>\n            </ul>\n        </div>\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], WordListComponent);
