@@ -50,6 +50,7 @@ System.register(['./grid'], function(exports_1, context_1) {
                     var directions = [this.DIRS.right, this.DIRS.down];
                     if (diagonal) {
                         directions.push(this.DIRS.rightdown);
+                        directions.push(this.DIRS.leftup);
                     }
                     if (backward) {
                         directions.push(this.DIRS.left);
@@ -58,7 +59,6 @@ System.register(['./grid'], function(exports_1, context_1) {
                     if (diagonal && backward) {
                         directions.push(this.DIRS.rightup);
                         directions.push(this.DIRS.leftdown);
-                        directions.push(this.DIRS.leftup);
                     }
                     var numDirections = directions.length;
                     for (var i = 0; i < this.size; i++) {

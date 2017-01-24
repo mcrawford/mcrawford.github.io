@@ -35,18 +35,18 @@ System.register(['angular2/core', './puzzle-spec'], function(exports_1, context_
                     if (this.level == 'basic') {
                         this.puzzleSpec.numRows = 10;
                         this.puzzleSpec.numCols = 10;
-                        this.puzzleSpec.diagonal = false;
+                        this.puzzleSpec.diagonal = true;
                         this.puzzleSpec.backward = false;
                     }
                     else if (this.level == 'intermediate') {
-                        this.puzzleSpec.numRows = 14;
-                        this.puzzleSpec.numCols = 14;
+                        this.puzzleSpec.numRows = 13;
+                        this.puzzleSpec.numCols = 13;
                         this.puzzleSpec.diagonal = true;
                         this.puzzleSpec.backward = false;
                     }
                     else {
-                        this.puzzleSpec.numRows = 18;
-                        this.puzzleSpec.numCols = 18;
+                        this.puzzleSpec.numRows = 16;
+                        this.puzzleSpec.numCols = 16;
                         this.puzzleSpec.diagonal = true;
                         this.puzzleSpec.backward = true;
                     }

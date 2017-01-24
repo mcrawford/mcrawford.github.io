@@ -11,8 +11,8 @@
         <label for="level">Level</label>
         <select [(ngModel)]="level" (change)="setOptions($event.target.value)" class="form-control">
             <option value="basic">Basic (10x10) (words across and down)</option>
-            <option value="intermediate">Intermediate (14x14) (words across, down, and diagonal)</option>
-            <option value="advanced">Advanced (18x18) (words across, down, diagonal, and backwards)</option>
+            <option value="intermediate">Intermediate (13x13) (words across, down, and diagonal)</option>
+            <option value="advanced">Advanced (16x16) (words across, down, diagonal, and backwards)</option>
         </select>
     </div>
     <button (click)="submitPuzzleForm()" type="button" class="btn btn-default">Create!</button>
