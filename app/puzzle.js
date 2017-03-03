@@ -50,14 +50,14 @@ System.register(['./grid'], function(exports_1, context_1) {
                     var directions = [this.DIRS.right, this.DIRS.down];
                     if (diagonal) {
                         directions.push(this.DIRS.rightdown);
-                        directions.push(this.DIRS.leftup);
+                        directions.push(this.DIRS.rightup);
                     }
                     if (backward) {
                         directions.push(this.DIRS.left);
                         directions.push(this.DIRS.up);
                     }
                     if (diagonal && backward) {
-                        directions.push(this.DIRS.rightup);
+                        directions.push(this.DIRS.leftup);
                         directions.push(this.DIRS.leftdown);
                     }
                     var numDirections = directions.length;

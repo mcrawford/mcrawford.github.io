@@ -33,8 +33,8 @@ System.register(['angular2/core', './puzzle-spec'], function(exports_1, context_
                 PuzzleFormComponent.prototype.setOptions = function (level) {
                     this.level = level;
                     if (this.level == 'basic') {
-                        this.puzzleSpec.numRows = 10;
-                        this.puzzleSpec.numCols = 10;
+                        this.puzzleSpec.numRows = 11;
+                        this.puzzleSpec.numCols = 11;
                         this.puzzleSpec.diagonal = true;
                         this.puzzleSpec.backward = false;
                     }
