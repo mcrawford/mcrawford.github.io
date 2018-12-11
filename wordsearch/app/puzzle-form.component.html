@@ -1,0 +1,21 @@
+<form>
+    <div class="form-group">
+        <label for="title">Puzzle Title</label>
+        <input type="text" [(ngModel)]="puzzleSpec.title" name="title" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label for="text">Enter Text</label>
+        <textarea [(ngModel)]="puzzleSpec.text" name="text" class="form-control" rows="5">{{ text }}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="level">Level</label>
+        <select [(ngModel)]="level" (change)="setOptions($event.target.value)" class="form-control">
+            <option value="basic">Basic (11x11) (words across, down, and diagonal down)</option>
+            <option value="intermediate">Intermediate (13x13) (words across, down, and diagonal up and down)</option>
+            <option value="advanced">Advanced (16x16) (words across, down, diagonal, and backwards)</option>
+        </select>
+    </div>
+    <button (click)="submitPuzzleForm()" type="button" class="btn btn-default">Create!</button>
+</form>
+
+        
