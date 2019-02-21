@@ -1,0 +1,171 @@
+/* http://getbootstrap.com/customize/?id=3663b0f4224d2f42465f */
+
+body {
+    font-size: 13px;
+    padding-bottom:40px;
+}
+@media (min-width: 768px) {
+    body {
+        font-size:14px;
+        padding-bottom:0;
+        padding-top:20px;
+    }
+}
+
+nav h1 {
+    margin-top:0;
+}
+nav h1 a, nav h1 a:hover, nav h1 a:visited {
+    color: #333;
+    text-decoration:none;
+}
+
+button.list-group-item.text-center {
+    text-align: center;
+}
+
+.rare .btn {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#extraRollDiv {
+    margin-top:11px;
+    margin-right:0;
+}
+h4#decider {
+    background: url(img/decider.png) no-repeat;
+    height:24px;
+    width:24px;
+}
+h4#decider.dd-no {
+    background-position: -24px 0;
+}
+h4#extraRoll {
+    margin-top:13px;
+    margin-right:10px;
+}
+
+#mainChart tbody td:first-child, .miniChartDiv tbody td:first-child {
+    white-space: nowrap;
+}
+
+#gameDayDiv p {
+    padding: 15px;
+}
+
+.navbar-btn-first {
+    margin-left:8px;
+}
+
+.text-muted, .text-primary, .text-success, .text-info, .text-warning, .text-danger {
+    font-weight:700;
+}
+
+/** Changing success to purple. **/
+/* http://getbootstrap.com/customize/?id=3663b0f4224d2f42465f */
+.text-success {
+  color: #803980;
+}
+a.text-success:hover {
+  color: #662E66;
+}
+
+.btn-success {
+  color: #ffffff;
+  background-color: #803980;
+  border-color: #6e316e;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success.focus,
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  color: #ffffff;
+  background-color: #5d295d;
+  border-color: #441e44;
+}
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  background-image: none;
+}
+.btn-success.disabled,
+.btn-success[disabled],
+fieldset[disabled] .btn-success,
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled.focus,
+.btn-success[disabled].focus,
+fieldset[disabled] .btn-success.focus,
+.btn-success.disabled:active,
+.btn-success[disabled]:active,
+fieldset[disabled] .btn-success:active,
+.btn-success.disabled.active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success.active {
+  background-color: #803980;
+  border-color: #6e316e;
+}
+.btn-success .badge {
+  color: #803980;
+  background-color: #ffffff;
+}
+.btn-success {
+  background-image: -webkit-linear-gradient(top, #803980 0%, #562656 100%);
+  background-image: -o-linear-gradient(top, #803980 0%, #562656 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#803980), to(#562656));
+  background-image: linear-gradient(to bottom, #803980 0%, #562656 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff803980', endColorstr='#ff562656', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #4f234f;
+}
+.btn-success:hover,
+.btn-success:focus {
+  background-color: #562656;
+  background-position: 0 -15px;
+}
+.btn-success:active,
+.btn-success.active {
+  background-color: #562656;
+  border-color: #4f234f;
+}
+.btn-success.disabled,
+.btn-success:disabled,
+.btn-success[disabled] {
+  background-color: #562656;
+  background-image: none;
+}
+
+.list-group-item-success {
+  color: #4d224d;
+  background-color: #e6d7e6;
+}
+a.list-group-item-success, button.list-group-item-success {
+  color: #4d224d;
+}
+a.list-group-item-success .list-group-item-heading {
+  color: inherit;
+}
+a.list-group-item-success:hover,
+a.list-group-item-success:focus,
+button.list-group-item-success:hover,
+button.list-group-item-success:focus{
+  color: #4d224d;
+  background-color: #dcc7dc;
+}
+a.list-group-item-success.active,
+a.list-group-item-success.active:hover,
+a.list-group-item-success.active:focus,
+button.list-group-item-success.active,
+button.list-group-item-success.active:hover,
+button.list-group-item-success.active:focus{
+  color: #fff;
+  background-color: #4d224d;
+  border-color: #4d224d;
+}
