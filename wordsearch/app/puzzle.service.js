@@ -48,7 +48,7 @@ System.register(['angular2/core', './puzzle'], function(exports_1, context_1) {
                         }
                         n++;
                         loopEnd = new Date().getTime();
-                    } while (puzzle != null && puzzle.skippedWords.length > 0 && loopEnd - start < 500);
+                    } while (puzzle != null && puzzle.skippedWords.length > 0 && loopEnd - start < 1000);
                     console.log("Tried " + n + " puzzles.");
                     return puzzle;
                 };
@@ -65,17 +65,17 @@ System.register(['angular2/core', './puzzle'], function(exports_1, context_1) {
                         directionScore = Math.pow(wordsByDirection[0] * wordsByDirection[1] * (wordsByDirection[2] + 5), 1 / 3);
                     }
                     else if (puzzle.diagonal && puzzle.backward) {
-                        directionScore = Math.pow(wordsByDirection[0] *
-                            wordsByDirection[1] *
+                        directionScore = Math.pow((wordsByDirection[0] + 1) *
+                            (wordsByDirection[1] + 1) *
                             (wordsByDirection[2] + 5) *
-                            wordsByDirection[3] *
-                            wordsByDirection[4] *
+                            (wordsByDirection[3] + 1) *
+                            (wordsByDirection[4] + 1) *
                             (wordsByDirection[5] + 5) *
                             (wordsByDirection[6] + 5) *
                             (wordsByDirection[7] + 5), 1 / 8);
                     }
-                    score += 10 * directionScore; // 10 is just an arbitrary scaling factor
-                    console.log("--- " + numLetters + " letters, " + Math.round(10 * directionScore) + " for directions (" + wordsByDirection + ") = " + Math.round(score));
+                    score += 100 * directionScore; // 20 is just an arbitrary scaling factor
+                    console.log("--- " + numLetters + " letters, " + Math.round(100 * directionScore) + " for directions (" + wordsByDirection + ") = " + Math.round(score));
                     return score;
                 };
                 PuzzleService.prototype.puzzleContainsSkipWords = function (puzzle) {

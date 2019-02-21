@@ -46,7 +46,7 @@ System.register(['angular2/core', './word-list.component', './word-list.service'
                 }
                 AppComponent.prototype.createPuzzle = function (e) {
                     this.words = this._wordListService.getWordList(this.puzzleSpec.text);
-                    this.puzzle = this._puzzleService.generatePuzzle(this.words, this.puzzleSpec.numRows, this.puzzleSpec.numCols, this.puzzleSpec.diagonal, this.puzzleSpec.backward);
+                    this.puzzle = this._puzzleService.generatePuzzle(this.words, this.puzzleSpec.numRows, this.puzzleSpec.numCols, this.puzzleSpec.diagonal, this.puzzleSpec.backwards);
                 };
                 AppComponent = __decorate([
                     core_1.Component({

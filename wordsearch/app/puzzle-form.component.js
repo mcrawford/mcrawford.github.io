@@ -36,19 +36,19 @@ System.register(['angular2/core', './puzzle-spec'], function(exports_1, context_
                         this.puzzleSpec.numRows = 11;
                         this.puzzleSpec.numCols = 11;
                         this.puzzleSpec.diagonal = true;
-                        this.puzzleSpec.backward = false;
+                        this.puzzleSpec.backwards = false;
                     }
                     else if (this.level == 'intermediate') {
                         this.puzzleSpec.numRows = 13;
                         this.puzzleSpec.numCols = 13;
                         this.puzzleSpec.diagonal = true;
-                        this.puzzleSpec.backward = false;
+                        this.puzzleSpec.backwards = true;
                     }
                     else {
                         this.puzzleSpec.numRows = 16;
                         this.puzzleSpec.numCols = 16;
                         this.puzzleSpec.diagonal = true;
-                        this.puzzleSpec.backward = true;
+                        this.puzzleSpec.backwards = true;
                     }
                 };
                 PuzzleFormComponent.prototype.submitPuzzleForm = function (e) {
