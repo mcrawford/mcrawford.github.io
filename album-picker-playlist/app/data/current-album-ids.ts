@@ -67,5 +67,7 @@ export const currentAlbumIds = [
   'spotify:album:7fJJK56U9fHixgO0HQkhtI',
   'spotify:album:7BChePfQv6DX8CinaBOkqw',
   'spotify:album:7iwS1r6JHYJe9xpPjzmWqD',
-  'spotify:album:0ihYToxMgYcuHuxOKjGQKO'
+  'spotify:album:0ihYToxMgYcuHuxOKjGQKO',
+    'spotify:album:3QSRtkfas8Gr0vDByhFvkE',
+    'spotify:album:3sF4iIrRTsRNKC6AMR6D2d'
 ];
