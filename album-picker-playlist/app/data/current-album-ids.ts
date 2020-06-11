@@ -1,11 +1,5 @@
 export const currentAlbumIds = [
-    'spotify:album:162ZDwMcg8NGzp6BPKy58G',
-    'spotify:album:1A3nVEWRJ8yvlPzawHI1pQ',
-    'spotify:album:7tcbI0Qp64LaGwHYgwkbBO',
-    'spotify:album:5NzK7S7oQQnO8eLRf7kDJx',
-    'spotify:album:0znk4I7BChCGG8SZ5nRneU',
     'spotify:album:4zAQQvgbXyFJ5Hk20BF794',
-    'spotify:album:1r4TaIR9nZHCM2umwoEiWB',
     'spotify:album:1G2YEQPXaOj1JZwa3ZiGe8',
     'spotify:album:4eIsAOEVirxfsiQpwbhBpP',
     'spotify:album:0uPtQD2M9BS7qJdl0lKORM',
@@ -70,5 +64,6 @@ export const currentAlbumIds = [
     'spotify:album:0ihYToxMgYcuHuxOKjGQKO',
     'spotify:album:3QSRtkfas8Gr0vDByhFvkE',
     'spotify:album:3sF4iIrRTsRNKC6AMR6D2d',
-    'spotify:album:2TuXIRGEbUFfakkBDXMLN1'
+    'spotify:album:2TuXIRGEbUFfakkBDXMLN1',
+    'spotify:album:082Lg7YaKtzsScelrtfwdx'
 ];
