@@ -66,5 +66,6 @@ export const currentAlbumIds = [
     'spotify:album:3sF4iIrRTsRNKC6AMR6D2d',
     'spotify:album:2TuXIRGEbUFfakkBDXMLN1',
     'spotify:album:082Lg7YaKtzsScelrtfwdx',
-    'spotify:album:0fO1KemWL2uCCQmM22iKlj'
+    'spotify:album:0fO1KemWL2uCCQmM22iKlj',
+    'spotify:playlist:4i85zoO6zreYlHNHqiGPtd' // Holding Things Together
 ];
