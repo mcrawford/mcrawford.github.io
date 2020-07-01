@@ -9,13 +9,6 @@ export const recentAlbumIds = [
   'spotify:album:0wL2jTDIlsPrvwEm7Le0ML',
   'spotify:album:2MdvQKgPqxuuvZJ1MI26vP',
   'spotify:album:38G9JqlztibTL7CtMyHpGp',
-  'spotify:album:04eCvgJUR7mpswO1lYKHMZ',
-  'spotify:album:08gaJDLvSafVxpaaZCo9Pm',
-  'spotify:album:7qYJbYwpR4NDyG4OLb6tSb',
-  'spotify:album:6o4STrKI7oQoWppn6Nkdp5',
-  'spotify:album:6mhtDkhRpfFvGPKx3PtTbP',
-  'spotify:album:2dEkjiUBO6Z2aeolcJ7sCy',
-  'spotify:album:1ywbbTbQU1abdFEoYTYTPH',
   'spotify:album:6Yu3m6c7tXFBQMeD42ccvu',
   'spotify:album:73iz4oHKG9ivUHYoQWXifI',
   'spotify:album:4Fa6HWiSqDPsa7E27BOUdt',
@@ -141,5 +134,9 @@ export const recentAlbumIds = [
   'spotify:album:7tcbI0Qp64LaGwHYgwkbBO',
   'spotify:album:5NzK7S7oQQnO8eLRf7kDJx',
   'spotify:album:0znk4I7BChCGG8SZ5nRneU',
-  'spotify:album:1r4TaIR9nZHCM2umwoEiWB'
+  'spotify:album:1r4TaIR9nZHCM2umwoEiWB',
+  'spotify:album:4zAQQvgbXyFJ5Hk20BF794',
+  'spotify:album:1G2YEQPXaOj1JZwa3ZiGe8',
+  'spotify:album:4eIsAOEVirxfsiQpwbhBpP',
+  'spotify:album:0uPtQD2M9BS7qJdl0lKORM'
 ];
