@@ -52,7 +52,6 @@ export const currentAlbumIds = [
     'spotify:album:1X0Na8DRV5U6G9grTPDWKF',
     'spotify:album:3Nvg44zb0oK9BR2gdDanum',
     'spotify:album:6gHLOAoKYiuSjrZOFksGrQ',
-    'spotify:album:55nVJgTbHv0k3Y1u0Spqpl',
     'spotify:album:04HMMwLmjkftjWy7xc6Bho',
     'spotify:album:7fJJK56U9fHixgO0HQkhtI',
     'spotify:album:7BChePfQv6DX8CinaBOkqw',
@@ -66,5 +65,6 @@ export const currentAlbumIds = [
     'spotify:playlist:4i85zoO6zreYlHNHqiGPtd', // Holding Things Together
     'spotify:album:250aqfd2kGUcVKV0tdIOjm',
     'spotify:album:42TJ96JzVeoSBXrYUySDj8',
-    'spotify:album:0pDyIBwFjeTxJzttXt1lF3'
+    'spotify:album:0pDyIBwFjeTxJzttXt1lF3',
+    'spotify:album:0DLkBrivkPhPGeSowPUyde'
 ];
