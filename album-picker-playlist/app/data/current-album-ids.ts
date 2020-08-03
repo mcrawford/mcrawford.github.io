@@ -1,10 +1,4 @@
 export const currentAlbumIds = [
-    'spotify:album:7Kv0H0XMdIyRs41a6USzrd',
-    'spotify:album:4CoVaspPd2kMWdtOUOWTnQ',
-    'spotify:album:2T9P5dSm786uuxA5tkI1Xb',
-    'spotify:album:7bgi7zCoDsZdlLKPonHZqP',
-    'spotify:album:4eoqDSXCN8HD4FLWMS1OWy',
-    'spotify:album:1TBsjqIhXaIF05Pe2903n4',
     'spotify:album:42qt8FhWtmal27Gasz3r4v',
     'spotify:album:0PMmJ0qQByXO0ROaKYq74k',
     'spotify:playlist:6hMVxBoOvNLKqwGofLB6qw', // Daisy Age
@@ -66,5 +60,7 @@ export const currentAlbumIds = [
     'spotify:album:250aqfd2kGUcVKV0tdIOjm',
     'spotify:album:42TJ96JzVeoSBXrYUySDj8',
     'spotify:album:0pDyIBwFjeTxJzttXt1lF3',
-    'spotify:album:0DLkBrivkPhPGeSowPUyde'
+    'spotify:album:0DLkBrivkPhPGeSowPUyde',
+    'spotify:album:7mBtzjnzUXnaDk9LtBrjZx',
+    'spotify:album:1Qht64MPvWTWa0aMsqxegB'
 ];
