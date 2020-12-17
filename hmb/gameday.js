@@ -380,47 +380,47 @@ function sunnyLocalMedia() {
 }
 
 function player() {
-    var player;
+    var plyr;
     var choices;
     switch (d6()) {
         case 1:
         case 3:
             choices = ["1B", "2B", "3B", "SS", "C", "(choice)"];
-            player = "Starting " + choices[d6() - 1];
+            plyr = "Starting " + choices[d6() - 1];
             break;
         case 2:
             choices = ["RF", "RF", "CF", "CF", "LF", "LF"];
-            player = "Starting " + choices[d6() - 1];
+            plyr = "Starting " + choices[d6() - 1];
             break;
         case 4:
             choices = ["1B", "2B", "3B", "SS", "C", "(choice)"];
-            player = "Reserve " + choices[d6() - 1];
+            plyr = "Reserve " + choices[d6() - 1];
             break;
         case 5:
         case 6:
             choices = ["Today's Starter.", "Last game's Starter.", "Next game's Starter.", "Last-used reliever.", "Most-used Reliever.", "Least-used Reliever."];
-            player = "Pitcher: " + choices[d6() - 1];
+            plyr = "Pitcher: " + choices[d6() - 1];
             break;
     }
-    return player;
+    return plyr;
 }
 
 function stormyFrontOffice() {
     var message;
     var prefix = "";
-    var player;
+    var plyr;
     var choices;
     var issue;
     switch (d6()) {
         case 1:
             prefix = "Minor issue with player: ";
-            player = player();
+            plyr = player();
             issue = d6() <= 3 ? "UNHAPPY, this game." : "COLD, this game.";
             message = prefix + player + " " + issue;
             break;
         case 2:
             prefix = "Major issue with player: ";
-            player = player();
+            plyr = player();
             issue = d6() <= 3 ? "UNHAPPY, TFN." : "COLD, TFN.";
             message = prefix + player + " " + issue;
             break;
@@ -457,19 +457,19 @@ function stormyFrontOffice() {
 function stormyMedia() {
     var message;
     var prefix;
-    var player;
+    var plyr;
     var choices;
     var issue;
     switch (d6()) {
         case 1:
             prefix = "Minor issue with player: ";
-            player = player();
+            plyr = player();
             issue = d6() <= 3 ? "UNHAPPY, this game." : "COLD, this game.";
             message = prefix + player + " " + issue;
             break;
         case 2:
             prefix = "Major issue with player: ";
-            player = player();
+            plyr = player();
             issue = d6() <= 3 ? "UNHAPPY, TFN." : "COLD, TFN.";
             message = prefix + player + " " + issue;
             break;
@@ -548,7 +548,7 @@ function stormyTeamTrainer() {
 
     var message;
     var prefix;
-    var player;
+    var plyr;
     var choices;
     var issue;
     var d;
@@ -564,13 +564,13 @@ function stormyTeamTrainer() {
                 "Next game's starter-major issue."
             ];
             d = d6();
-            player = choices[d - 1];
+            plyr = choices[d - 1];
             if (d <= 3) {
                issue = stormyTeamTrainerMinorPitcher();
             } else {
                issue = stormyTeamTrainerMajor();
             }
-            message = prefix + " " + player + " " + issue;
+            message = prefix + " " + plyr + " " + issue;
             break;
         case 2:
             prefix = "Issue with starter, non-pitcher.";
@@ -583,13 +583,13 @@ function stormyTeamTrainer() {
                 "Outfielder, major issue."
             ];
             d = d6();
-            player = choices[d - 1];
+            plyr = choices[d - 1];
             if (d == 1 || d == 2 || d == 5) {
                 issue = stormyTeamTrainerMinorHitter();
             } else {
                 issue = stormyTeamTrainerMajor();
             }
-            message = prefix + " " + player + " " + issue;
+            message = prefix + " " + plyr + " " + issue;
             break;
         case 3:
             prefix = "Issue with non-starter, pitcher.";
@@ -602,13 +602,13 @@ function stormyTeamTrainer() {
                 "Reliever used last game, major issue."
             ];
             d = d6();
-            player = choices[d - 1];
+            plyr = choices[d - 1];
             if (d == 1 || d == 3 || d == 5) {
                 issue = stormyTeamTrainerMinorPitcher();
             } else {
                 issue = stormyTeamTrainerMajor();
             }
-            message = prefix + " " + player + " " + issue;
+            message = prefix + " " + plyr + " " + issue;
             break;
         case 4:
             prefix = "Issue with non-starter, non-pitcher.";
@@ -621,13 +621,13 @@ function stormyTeamTrainer() {
                 "Reserve Outfielder, major issue."
             ];
             d = d6();
-            player = choices[d - 1];
+            plyr = choices[d - 1];
             if (d == 1 || d == 2 || d == 5) {
                 issue = stormyTeamTrainerMinorHitter();
             } else {
                 issue = stormyTeamTrainerMajor();
             }
-            message = prefix + " " + player + " " + issue;
+            message = prefix + " " + plyr + " " + issue;
             break;
         default:
             message = NON_ISSUE;
@@ -814,7 +814,7 @@ function stormyPitchingCoach() {
 }
 
 function injury() {
-    var player;
+    var plyr;
     var games;
     var catcher = "";
 
@@ -898,37 +898,37 @@ function injury() {
 
     switch (d6()) {
         case 1:
-            player = "Starting Pitcher";
+            plyr = "Starting Pitcher";
             games = injuryGamesPitcher();
             catcher = "Also, catcher must sit out this game.";
             break;
         case 2:
             if (d6() <= 3) {
-                player = "Starting Pitcher";
+                plyr = "Starting Pitcher";
                 games = injuryGamesPitcher();
             } else {
-                player = injuryOutfielder();
+                plyr = injuryOutfielder();
                 games = injuryGamesBatter();
             }
             break;
         case 3:
-            player = injuryOutfielder();
+            plyr = injuryOutfielder();
             games = injuryGamesBatter();
             catcher = "Also, catcher must sit out this game.";
             break;
         case 4:
-            player = injuryInfielder();
+            plyr = injuryInfielder();
             games = injuryGamesBatter();
             break;
         case 5:
-            player = injuryInfielder();
+            plyr = injuryInfielder();
             games = injuryGamesBatter();
             catcher = "Also, catcher must sit out this game.";
             break;
         case 6:
-            player = injuryInfielder();
+            plyr = injuryInfielder();
             games = injuryGamesBatter();
             break;
     }
-    return "Injury: " + player + " out for " + games + ". " + catcher;
+    return "Injury: " + plyr + " out for " + games + ". " + catcher;
 }

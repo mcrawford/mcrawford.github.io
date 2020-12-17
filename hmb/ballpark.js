@@ -1,6 +1,6 @@
 Ballpark = {
     1: {
-        1: "GRASS Ballpark? Routine grount out to 3B; OTHERWISE \"astro-turf single\" into CF [ACTIVE runner stretches into triple].",
+        1: "GRASS Ballpark? Routine ground out to 3B; OTHERWISE \"astro-turf single\" into CF [ACTIVE runner stretches into triple].",
         2: "BIG Ballpark? Driving liner gets into CF, single; OTHERWISE. CF makes catch, fly out.",
         3: "SMALL Ballpark? Foul ball into 1B bleachers, batter still at bat; OTHERWISE, 1B makes catch of towering foul ball, out.",
         4: "SMALL Ballpark? Fan in bleachers celebrates catch of Home Run ball; OTHER parks, OF makes routine grab, fly out.",
