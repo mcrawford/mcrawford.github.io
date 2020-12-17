@@ -416,13 +416,13 @@ function stormyFrontOffice() {
             prefix = "Minor issue with player: ";
             plyr = player();
             issue = d6() <= 3 ? "UNHAPPY, this game." : "COLD, this game.";
-            message = prefix + player + " " + issue;
+            message = prefix + plyr + " " + issue;
             break;
         case 2:
             prefix = "Major issue with player: ";
             plyr = player();
             issue = d6() <= 3 ? "UNHAPPY, TFN." : "COLD, TFN.";
-            message = prefix + player + " " + issue;
+            message = prefix + plyr + " " + issue;
             break;
         case 3:
             prefix = "Minor issue with manager: ";
@@ -465,13 +465,13 @@ function stormyMedia() {
             prefix = "Minor issue with player: ";
             plyr = player();
             issue = d6() <= 3 ? "UNHAPPY, this game." : "COLD, this game.";
-            message = prefix + player + " " + issue;
+            message = prefix + plyr + " " + issue;
             break;
         case 2:
             prefix = "Major issue with player: ";
             plyr = player();
             issue = d6() <= 3 ? "UNHAPPY, TFN." : "COLD, TFN.";
-            message = prefix + player + " " + issue;
+            message = prefix + plyr + " " + issue;
             break;
         case 3:
             prefix = "Minor issue with manager: ";
